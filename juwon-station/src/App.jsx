@@ -1,5 +1,14 @@
-﻿import ChargeDashboard from './ChargeDashboard';
+﻿import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ChargeDashboard from './ChargeDashboard';
+import NewChargeDashboard from './NewChargeDashboard';
 
 export default function App() {
-	return <ChargeDashboard onGoDetail={() => console.log('→ 상세 보기')} onGoMain={() => console.log('→ 1(초기화면)')} />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ChargeDashboard />} />
+        <Route path="/NewChargeDashboard" element={<NewChargeDashboard />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
