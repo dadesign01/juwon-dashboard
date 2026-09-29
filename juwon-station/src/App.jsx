@@ -1,5 +1,4 @@
 ﻿import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ChargeDashboard from './ChargeDashboard';
 import NewChargeDashboard from './NewChargeDashboard';
 import Flow1 from './flow/flow-1';
 import Flow2 from './flow/flow-2';
@@ -14,7 +13,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ChargeDashboard />} />
+        <Route path="/" element={<Flow1 />} />
         <Route path="/NewChargeDashboard" element={<NewChargeDashboard />} />
 
         <Route path="/flow/flow-1" element={<Flow1 />} />
