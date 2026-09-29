@@ -7,6 +7,7 @@ import chargeImage from './assets/charge.png';
 import brChargeImage from './assets/br_charge.png';
 import connectFail from './assets/connect_fail.png';
 import whBackground from './assets/wh_background.png';
+import { useNavigate } from 'react-router-dom';
 import './newkiosk.css';
 
 /* ============================================================================
@@ -591,6 +592,7 @@ const Summary = ({ icon, label, value, tone }) => (
    메인
    ========================================================================== */
 export default function ChargeDashboard({ onGoMain, onGoPayment }) {
+	const navigate = useNavigate();
 	const [stations, setStations] = useState(initialData.stations);
 	const [idx, setIdx] = useState(0);
 	const [pending, setPending] = useState(null);
@@ -828,7 +830,7 @@ export default function ChargeDashboard({ onGoMain, onGoPayment }) {
 				</button>
 			</div>
 			{/* ── 하단 액션 (3번 메인으로 / 5번 결제하기) ── */}
-			<div className="actions" onClick={onGoPayment}>
+			<div className="actions" onClick={() => navigate('/flow/flow-6')}>
 					{Ico.pay} 결제하기
 			</div>
 
