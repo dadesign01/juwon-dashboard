@@ -750,7 +750,7 @@ export default function ChargeDashboard({ onGoMain, onGoPayment }) {
 					<span className="text">HOME</span>
 				</div>
 				<div className="hdr__center">
-					<img className="hdr__logo" src={juwonLogo} alt="JUWON 주원" />
+					<img className="hdr__logo" src={juwonLogo} alt="JUWON 주원" style={{ height: '50px', width : '250px' }} />
 					{/* <div className="hdr__sub">현재 화면: {station.name}</div> */}
 				</div>
 				<WeatherBadge weather={weather} stale={weatherStale} />
