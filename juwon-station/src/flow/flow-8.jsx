@@ -222,7 +222,7 @@ export default function Flow8({ }) {
 			</div>
 
 			{/* ── 하단 액션 ── */}
-			<div className="actions" onClick={() => navigate('/flow/flow-1')}>
+			<div className="actions" onClick={() => navigate('/')}>
 				{Ico.homeBtn} 메인으로
 			</div>
 		</div>
